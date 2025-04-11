@@ -1,7 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router";
 import LudoLogin from "./pages/ludoLogin";
 import Game from "./pages/game";
-
 function App() {
 
   return (
