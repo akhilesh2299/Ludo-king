@@ -3,6 +3,7 @@ import http from 'http';
 import { Server } from 'socket.io';
 import cors from 'cors';
 import authRoutes from '../src/routes/authRoutes'
+import gameRoutes from "../src/routes/gameRoutes"
 // import { setupSocket } from './socket';
 
 const app = express();
@@ -20,6 +21,7 @@ app.use(cors({ origin: "http://localhost:3000", credentials: true }));
 app.use(express.json());
 
 app.use("/api/auth", authRoutes);
+app.use("/api/game", gameRoutes)
 
 app.get('/api', (_, res) => {
   res.send('Ludo backend running!');
