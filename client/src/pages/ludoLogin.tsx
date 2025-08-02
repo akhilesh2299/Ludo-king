@@ -2,14 +2,12 @@
 
 import React, { useState } from "react";
 
-const GOOGLE_AUTH_URL = "http://localhost:3000/auth/google";
-
 const LudoLogin: React.FC = () => {
   const [isLoading, setIsLoading] = useState(false);
 
   const handleGoogleSignIn = () => {
     setIsLoading(true);
-    window.location.href = GOOGLE_AUTH_URL;
+    window.location.href = 'http://localhost:3000/login';
   };
 
   return (
@@ -87,7 +85,7 @@ const LudoLogin: React.FC = () => {
                       fill="#EA4335"
                     />
                   </svg>
-                  Sign in with Google
+                  Get Started
                 </>
               )}
             </button>
