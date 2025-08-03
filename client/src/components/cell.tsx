@@ -13,28 +13,40 @@ const Cell: React.FC<Props> = ({ index }) => {
   // RED Zone (Top-Left outer layer)
   if (row < 6 && col < 6) {
     if (row === 0 || row === 5 || col === 0 || col === 5) {
-      bg = "bg-red-500"
+      bg = "bg-red-500 border"
     }
+    // else{
+    //   if((row > 0 && row < 3) && col < 3){
+    //      bg = 'bg-yellow-700 border'
+    //   }
+    //   if((row > 0 && row >= 3) && col < 3){
+    //      bg = 'bg-blue-700 border'
+    //   }
+    //   if((row > 0 && row < 3) && col >= 3){
+    //      bg = 'bg-green-700 border'
+    //   }
+     
+    // }
   }
 
   // GREEN Zone (Top-Right outer layer)
   else if (row < 6 && col > 8) {
     if (row === 0 || row === 5 || col === 9 || col === 14) {
-      bg = "bg-green-500"
+      bg = "bg-green-500 border"
     }
   }
 
   // BLUE Zone (Bottom-Left outer layer)
   else if (row > 8 && col < 6) {
     if (row === 9 || row === 14 || col === 0 || col === 5) {
-      bg = "bg-blue-500"
+      bg = "bg-blue-500 border"
     }
   }
 
   // YELLOW Zone (Bottom-Right outer layer)
   else if (row > 8 && col > 8) {
     if (row === 9 || row === 14 || col === 9 || col === 14) {
-      bg = "bg-yellow-500"
+      bg = "bg-yellow-500 border"
     }
   }
 
